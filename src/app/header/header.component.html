@@ -27,7 +27,6 @@
       }"
     >
       <h1 [sJss]>Super Jss</h1>
-      
     </span>
   </div>
   <div
@@ -40,12 +39,21 @@
   >
     <div
       [sJss]="{
-        width: theme.spacing(5),
-        height: theme.spacing(5),
-        backgroundColor: theme.palette.common.white,
-        borderRadius: '50%'
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }"
-      (click)="colorClicked()"
-    ></div>
+    >
+      <div
+        [sJss]="{
+          width: theme.spacing(5),
+          height: theme.spacing(5),
+          backgroundColor: theme.palette.common.white,
+          borderRadius: '50%'
+        }"
+        (click)="colorClicked()"
+      ></div>
+      <span [sJss]="{ color: theme.palette.common.white }">click me</span>
+    </div>
   </div>
 </div>

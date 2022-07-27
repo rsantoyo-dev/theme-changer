@@ -9,20 +9,14 @@
   <h6 [sJss]="{ color: theme.palette.secondary.main }">
     This a theme handler example
   </h6>
-  <body
-    [sJss]="{
-      color: theme.palette.secondary.light,
-      marginTop: theme.spacing(3)
-    }"
-  >
-    This a theme handler example
-  </body>
-  <body
+
+  <span
     [sJss]="{ color: theme.palette.common.black, marginTop: theme.spacing(3) }"
   >
     theme.palette.primary.
-  </body>
-  <div [sJss]="{ marginTop: theme.spacing(3), display: 'flex' }">
+  </span>
+
+  <div [sJss]="{ marginTop: theme.spacing(3), display: 'flex', justifyContent:'space-between', flexDirection:{sm:'row', md:'column'} }">
     <div
       [sJss]="{
         backgroundColor: theme.palette.primary.main,
@@ -47,6 +41,41 @@
     >
       <span [sJss]="{ color: theme.palette.primary.contrastText }">dark</span>
     </div>
+    
+  </div>
+
+  <span
+    [sJss]="{ color: theme.palette.common.black, marginTop: theme.spacing(3) }"
+  >
+    theme.palette.secondary.
+  </span>
+
+  <div [sJss]="{ marginTop: theme.spacing(3), display: 'flex', justifyContent:'space-between', flexDirection:{sm:'row', md:'column'} }">
+    <div
+      [sJss]="{
+        backgroundColor: theme.palette.secondary.main,
+        padding: theme.spacing(8)
+      }"
+    >
+      <span [sJss]="{ color: theme.palette.secondary.contrastText }">main</span>
+    </div>
+    <div
+      [sJss]="{
+        backgroundColor: theme.palette.secondary.light,
+        padding: theme.spacing(8)
+      }"
+    >
+      <span [sJss]="{ color: theme.palette.secondary.contrastText }">light</span>
+    </div>
+    <div
+      [sJss]="{
+        backgroundColor: theme.palette.secondary.dark,
+        padding: theme.spacing(8)
+      }"
+    >
+      <span [sJss]="{ color: theme.palette.secondary.contrastText }">dark</span>
+    </div>
+    
   </div>
 
   <div></div>
