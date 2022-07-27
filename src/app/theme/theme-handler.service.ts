@@ -8,15 +8,20 @@ import { SJssTheme, SuperJssService } from 'super-jss';
 export class ThemeHandlerService {
   _theme: SJssTheme;
   themeChanges: BehaviorSubject<SJssTheme>;
-  constructor(superJssService: SuperJssService) {
+  constructor(private superJssService: SuperJssService) {
     this._theme = superJssService.defaultTheme();
     this.themeChanges = new BehaviorSubject<SJssTheme>(this._theme);
   }
+
   setTheme(newValue: SJssTheme): void {
     this._theme = newValue;
     this.themeChanges.next(this._theme);
   }
   getTheme(): Observable<SJssTheme> {
     return this.themeChanges.asObservable();
+  }
+
+  getDefaultTheme() {
+    return this.superJssService.defaultTheme();
   }
 }
