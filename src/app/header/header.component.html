@@ -1,5 +1,5 @@
 <div
-  [sJss]="{
+  [sj]="{
     display: 'flex',
     backgroundColor: theme.palette.primary.main,
     justifyContent: 'space-between',
@@ -7,7 +7,7 @@
   }"
 >
   <div
-    [sJss]="{
+    [sj]="{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -15,22 +15,22 @@
     }"
   >
     <img
-      [sJss]="{ maxWidth: theme.spacing(8) }"
+      [sj]="{ maxWidth: theme.spacing(8) }"
       src="assets/sjss_white.png"
       alt=""
     />
     <span
-      [sJss]="{
+      [sj]="{
         display: 'flex',
         color: theme.palette.primary.contrastText,
         marginLeft: theme.spacing(2)
       }"
     >
-      <h1 [sJss]>Super Jss</h1>
+      <h1 [sj]>Super Jss</h1>
     </span>
   </div>
   <div
-    [sJss]="{
+    [sj]="{
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -38,14 +38,14 @@
     }"
   >
     <div
-      [sJss]="{
+      [sj]="{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center'
       }"
     >
       <div
-        [sJss]="{
+        [sj]="{
           width: theme.spacing(5),
           height: theme.spacing(5),
           backgroundColor: theme.palette.common.white,
@@ -53,7 +53,7 @@
         }"
         (click)="colorClicked()"
       ></div>
-      <span [sJss]="{ color: theme.palette.common.white }">click me</span>
+      <span [sj]="{ color: theme.palette.common.white }">click me</span>
     </div>
   </div>
 </div>

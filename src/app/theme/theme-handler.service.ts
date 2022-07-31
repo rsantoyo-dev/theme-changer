@@ -15,6 +15,7 @@ export class ThemeHandlerService {
 
   setTheme(newValue: SJssTheme): void {
     this._theme = newValue;
+    this.superJssService.setTheme(newValue);
     this.themeChanges.next(this._theme);
   }
   getTheme(): Observable<SJssTheme> {
