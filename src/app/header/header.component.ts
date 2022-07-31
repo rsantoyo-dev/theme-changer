@@ -29,29 +29,29 @@ export class HeaderComponent implements OnInit {
 
   themeUpdated(): SJssTheme {
     return {
-      breakpoints: {xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536},
+      breakpoints: { xs: 0, sm: 600, md: 750, lg: 1200, xl: 1536 },
       spacing: (factor) => `${0.5 * factor}rem`,
       typography: {
-        default: {fontFamily: '"Roboto","Helvetica"', fontSize: '1.2em'},
-        H1: {fontSize: {xs: '2em'}, fontWeight: 'bold'},
-        H2: {fontSize: {xs: '1.8em', md: '2em'}, fontWeight: 'bolder'},
-        H3: {fontSize: {xs: '1.5em', md: '1.7em'}, fontWeight: 'bolder'},
-        H4: {fontSize: {xs: '1.3em', md: '1.5em'}, fontWeight: 'bolder'},
-        H5: {fontSize: {xs: '1em', md: '1.8em'}, fontWeight: 'bolder'},
-        H6: {fontSize: {xs: '0.8em', md: '1.2em'}, fontWeight: 'bolder'},
-        P: {fontSize: '0.5em', fontWeight: 'normal'},
-        SPAN: {fontSize: '0.35em', fontWeight: 'normal'},
+        default: { fontFamily: '"Roboto","Helvetica"', fontSize: '1.2em' },
+        H1: { fontSize: { xs: '2em' }, fontWeight: 'bold' },
+        H2: { fontSize: { xs: '1.8em', md: '2em' }, fontWeight: 'bolder' },
+        H3: { fontSize: { xs: '1.5em', md: '1.7em' }, fontWeight: 'bolder' },
+        H4: { fontSize: { xs: '1.3em', md: '1.5em' }, fontWeight: 'bolder' },
+        H5: { fontSize: { xs: '1em', md: '1.8em' }, fontWeight: 'bolder' },
+        H6: { fontSize: { xs: '0.8em', md: '1.2em' }, fontWeight: 'bolder' },
+        P: { fontSize: '0.5em', fontWeight: 'normal' },
+        SPAN: { fontSize: '0.35em', fontWeight: 'normal' },
       },
       palette: {
         common: {
-          black: "#030303",
-          white: "#fafafa",
+          black: '#030303',
+          white: '#fafafa',
           gray: {
             main: '#888888',
             light: '#aaaaaa',
             dark: '#555555',
             contrastText: '#dddddd',
-          }
+          },
         },
         primary: {
           main: '#006699',
@@ -94,8 +94,7 @@ export class HeaderComponent implements OnInit {
           secondary: '#1a1a1a',
           disabled: 'rgba(16,16,16,0.39)',
         },
-      }
-
-    }
+      },
+    };
   }
 }
