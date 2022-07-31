@@ -1,56 +1,56 @@
 <div
-  [sJss]="{
+  [sj]="{
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column',
     padding: theme.spacing(3)
   }"
 >
-  <h6 [sJss]="{ color: theme.palette.secondary.main }">
+  <h6 [sj]="{ color: theme.palette.secondary.main }">
     This a theme handler example
   </h6>
   <a href="https://www.npmjs.com/package/super-jss">Super-jss library</a>
-  <span [sJss]="{ color: theme.palette.secondary.main }">
+  <span [sj]="{ color: theme.palette.secondary.main }">
     to update, click on the header button
   </span>
 
   <span
-    [sJss]="{ color: theme.palette.common.black, marginTop: theme.spacing(3) }"
+    [sj]="{ color: theme.palette.common.black, marginTop: theme.spacing(3) }"
   >
     theme.palette.primary.
   </span>
 
   <div
-    [sJss]="{
+    [sj]="{
       marginTop: theme.spacing(3),
       display: 'flex',
       justifyContent: 'space-between',
-      flexDirection: { sm: 'row', md: 'column' }
+      flexDirection: { xs: 'column', md: 'row' }
     }"
   >
     <div
-      [sJss]="{
+      [sj]="{
         backgroundColor: theme.palette.primary.main,
         padding: theme.spacing(8)
       }"
     >
-      <span [sJss]="{ color: theme.palette.primary.contrastText }">main</span>
+      <span [sj]="{ color: theme.palette.primary.contrastText }">main</span>
     </div>
     <div
-      [sJss]="{
+      [sj]="{
         backgroundColor: theme.palette.primary.light,
         padding: theme.spacing(8)
       }"
     >
-      <span [sJss]="{ color: theme.palette.primary.contrastText }">light</span>
+      <span [sj]="{ color: theme.palette.primary.contrastText }">light</span>
     </div>
     <div
-      [sJss]="{
+      [sj]="{
         backgroundColor: theme.palette.primary.dark,
         padding: theme.spacing(8)
       }"
     >
-      <span [sJss]="{ color: theme.palette.primary.contrastText }">dark</span>
+      <span [sj]="{ color: theme.palette.primary.contrastText }">dark</span>
     </div>
   </div>
 
@@ -65,7 +65,7 @@
       marginTop: theme.spacing(3),
       display: 'flex',
       justifyContent: 'space-between',
-      flexDirection: { sm: 'row', md: 'column' }
+      flexDirection: { xs: 'column', md: 'row' }
     }"
   >
     <div
