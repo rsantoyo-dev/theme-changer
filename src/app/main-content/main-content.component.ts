@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { SJssTheme } from 'super-jss';
-import { ThemeHandlerService } from '../theme/theme-handler.service';
+import { SJssTheme, SJssThemeService } from 'super-jss';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.css'],
 })
 export class MainContentComponent implements OnInit {
   theme: SJssTheme;
-  constructor(private themeService: ThemeHandlerService) {
-    this.theme = themeService._theme;
-    themeService.getTheme().subscribe((t) => {
+  screenSize: string = '';
+  constructor(private themeService: SJssThemeService) {
+    this.theme = themeService.defaultTheme();
+    //subscribe to any changes on the theme
+    themeService.themeChanges().subscribe((t) => {
       this.theme = t;
+    });
+    //detect breakpoint according to window width
+    themeService.breakpointChanges().subscribe((sz) => {
+      this.screenSize = sz;
     });
   }
 

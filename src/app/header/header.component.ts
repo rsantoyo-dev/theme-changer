@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { SJssTheme } from 'super-jss';
-import { ThemeHandlerService } from '../theme/theme-handler.service';
+import { SJssTheme, SJssThemeService } from 'super-jss';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   theme: SJssTheme;
   toggleTheme: boolean = false;
-  constructor(private themeService: ThemeHandlerService) {
-    this.theme = themeService._theme;
-    themeService.getTheme().subscribe((t) => {
+  constructor(private themeService: SJssThemeService) {
+    this.theme = themeService.defaultTheme();
+    //subscribe to any changes on the theme
+    themeService.themeChanges().subscribe((t) => {
       this.theme = t;
     });
   }
@@ -20,10 +19,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
   colorClicked() {
     this.toggleTheme = !this.toggleTheme;
+    //update the theme to a new one of type SJssTheme
     this.themeService.setTheme(
-      this.toggleTheme
-        ? this.themeUpdated()
-        : this.themeService.getDefaultTheme()
+      this.toggleTheme ? this.themeUpdated() : this.themeService.defaultTheme()
     );
   }
 

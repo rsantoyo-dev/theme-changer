@@ -10,9 +10,25 @@
     This a theme handler example
   </h6>
   <a href="https://www.npmjs.com/package/super-jss">Super-jss library</a>
-  <span [sj]="{ color: theme.palette.secondary.main }">
+  <span
+    [sj]="{
+      color: theme.palette.secondary.main,
+      paddingBottom: theme.spacing(2)
+    }"
+  >
     to update, click on the header button
   </span>
+  <b
+    [sj]="{
+      backgroundColor: theme.palette.secondary.light,
+      color: theme.palette.primary.contrastText,
+      display: 'flex',
+      justifyContent: 'center',
+      padding: theme.spacing(2),
+      opacity: '0.5'
+    }"
+    >you are in {{ screenSize | uppercase }} size</b
+  >
 
   <span
     [sj]="{ color: theme.palette.common.black, marginTop: theme.spacing(3) }"
@@ -82,9 +98,7 @@
         padding: theme.spacing(8)
       }"
     >
-      <span [sj]="{ color: theme.palette.secondary.contrastText }"
-        >light</span
-      >
+      <span [sj]="{ color: theme.palette.secondary.contrastText }">light</span>
     </div>
     <div
       [sj]="{
