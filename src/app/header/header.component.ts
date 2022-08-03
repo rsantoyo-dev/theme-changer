@@ -35,10 +35,10 @@ export class HeaderComponent implements OnInit {
         H2: { fontSize: { xs: '1.8em', md: '2em' }, fontWeight: 'bolder' },
         H3: { fontSize: { xs: '1.5em', md: '1.7em' }, fontWeight: 'bolder' },
         H4: { fontSize: { xs: '1.3em', md: '1.5em' }, fontWeight: 'bolder' },
-        H5: { fontSize: { xs: '1em', md: '1.8em' }, fontWeight: 'bolder' },
-        H6: { fontSize: { xs: '0.8em', md: '1.2em' }, fontWeight: 'bolder' },
-        P: { fontSize: '0.5em', fontWeight: 'normal' },
-        SPAN: { fontSize: '0.35em', fontWeight: 'normal' },
+        H5: { fontSize: { xs: '1.1em', md: '1.8em' }, fontWeight: 'bolder' },
+        H6: { fontSize: { xs: '0.9em', md: '1.2em' }, fontWeight: 'bolder' },
+        P: { fontSize: '0.8em', fontWeight: 'normal' },
+        SPAN: { fontSize: '0.75em', fontWeight: 'normal' },
       },
       palette: {
         common: {
